@@ -31,22 +31,14 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 . /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-FPATH=/opt/homebrew/share/zsh-completions:/opt/homebrew/Cellar/zsh-async/1.8.5/share/zsh/site-functions:$FPATH
+FPATH=/opt/homebrew/share/zsh-completions:/opt/homebrew/Cellar/zsh-async/1.8.5/share/zsh/site-functions:$ZDOTDIR/.zsh_functions:$FPATH
 autoload -U colors && colors
 autoload -Uz vcs_info
 autoload -Uz async && async
 
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' actionformats \
-    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-zstyle ':vcs_info:*' formats       \
-    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
-zstyle ':vcs_info:(git):*' branchformat '%b%F{1}:%F{3}%r'
-precmd () { vcs_info }
-
 PS1="%? %n@%m:%2~ %# "
 PS2="%__>"
-RPS1="’${vcs_info_msg_0_}’ %T"
+RPS1="%T"
 RPS2="%^"
 
 autoload -U compinit

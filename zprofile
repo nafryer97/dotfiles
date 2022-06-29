@@ -1,4 +1,3 @@
-# add color to man pages
 typeset -gx MANROFFOPT='-c'
 typeset -gx LESS_TERMCAP_mb=$(tput bold; tput setaf 2)
 typeset -gx LESS_TERMCAP_md=$(tput bold; tput setaf 6)
@@ -33,5 +32,5 @@ typeset -U PATH path fpath
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval $(thefuck --alias)
-
+. $HOME/.cargo/env
 PATH=$HOME/bin:$PATH
