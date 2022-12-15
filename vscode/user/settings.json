@@ -1,0 +1,202 @@
+{
+    "telemetry.telemetryLevel": "crash",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'JetbrainsMonoNL Nerd Font Mono', 'Jetbrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
+    "editor.cursorStyle": "block",
+    "files.exclude": {
+        "**/.git": false
+    },
+    "editor.accessibilityPageSize": 1,
+    "editor.accessibilitySupport": "off",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.codeLensFontFamily": "Menlo",
+    "editor.dragAndDrop": false,
+    "editor.dropIntoEditor.enabled": false,
+    "editor.guides.bracketPairs": "active",
+    "editor.hover.delay": 800,
+    "editor.inlayHints.fontFamily": "Menlo",
+    "editor.inlayHints.fontSize": 11,
+    "editor.linkedEditing": true,
+    "editor.matchBrackets": "near",
+    "editor.parameterHints.cycle": true,
+    "editor.renderFinalNewline": false,
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderLineHighlightOnlyWhenFocus": true,
+    "editor.rulers": [
+        80
+    ],
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.scrollBeyondLastColumn": 1,
+    "editor.scrollBeyondLastLine": false,
+    "editor.smoothScrolling": true,
+    "editor.stickyTabStops": true,
+    "editor.unfoldOnClickAfterEndOfLine": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSurroundingLines": 3,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.find.seedSearchStringFromSelection": "selection",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnType": true,
+    "diffEditor.maxComputationTime": 0,
+    "diffEditor.maxFileSize": 0,
+    "diffEditor.wordWrap": "off",
+    "editor.minimap.enabled": false,
+    "editor.minimap.autohide": true,
+    "editor.minimap.size": "fill",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.quickSuggestionsDelay": 100,
+    "editor.suggest.localityBonus": true,
+    "editor.suggestFontSize": 11,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "files.autoGuessEncoding": true,
+    "files.eol": "\n",
+    "files.hotExit": "off",
+    "files.insertFinalNewline": true,
+    "files.maxMemoryForLargeFilesMB": 8192,
+    "files.simpleDialog.enable": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        "./bin/**": true,
+        "./build/**": true,
+        "./lib/**": true
+    },
+    "workbench.enableExperiments": false,
+    "workbench.list.smoothScrolling": true,
+    "workbench.localHistory.maxFileSize": 1024,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.fontAliasing": "auto",
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "workbench.tree.indent": 4,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.excludeDirty": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.editor.preferHistoryBasedLanguageDetection": true,
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.tabSizing": "shrink",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Community Material Theme Palenight High Contrast",
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.preferredHighContrastColorTheme": "Community Material Theme Palenight High Contrast",
+    "workbench.preferredHighContrastLightColorTheme": "Community Material Theme Lighter High Contrast",
+    "workbench.preferredLightColorTheme": "Community Material Theme Lighter",
+    "explorer.autoReveal": "focusNoScroll",
+    "explorer.confirmDelete": false,
+    "explorer.incrementalNaming": "smart",
+    "explorer.openEditors.sortOrder": "fullPath",
+    "search.actionsPosition": "auto",
+    "search.collapseResults": "auto",
+    "search.followSymlinks": false,
+    "search.quickOpen.includeSymbols": true,
+    "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+    "search.searchOnTypeDebouncePeriod": 700,
+    "search.seedOnFocus": true,
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "search.useIgnoreFiles": false,
+    "scm.diffDecorationsGutterPattern": {
+        "added": true
+    },
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.altClickMovesCursor": false,
+    "terminal.integrated.bellDuration": 800,
+    "terminal.integrated.confirmOnExit": "hasChildProcesses",
+    "terminal.integrated.confirmOnKill": "always",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.enableBell": true,
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.persistentSessionScrollback": 9999,
+    "terminal.integrated.scrollback": 9999,
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "/bin/zsh",
+            "icon": "terminal-bash",
+            "args": [
+                "--login"
+            ]
+        },
+        "bash": {
+            "path": "/bin/bash",
+            "icon": "terminal-bash",
+            "args": [
+                "--login"
+            ]
+        },
+        "tmux": {
+            "path": "/opt/homebrew/bin/tmux",
+            "icon": "terminal-tmux",
+            "args": [
+                "-2",
+                "-u",
+                "new-session",
+                "-A",
+                "-s",
+                "vscode_default"
+            ]
+        }
+    },
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "/usr/bin/zsh",
+            "args": [
+                "--login"
+            ]
+        },
+        "bash": {
+            "path": "/usr/bin/bash",
+            "args": [
+                "--login"
+            ]
+        },
+        "tmux": {
+            "path": "/usr/bin/tmux",
+            "args": [
+                "-2",
+                "-u",
+                "-S",
+                "/home/${env:USER}/tmp/tmux/vscode",
+                "new-session",
+                "-A",
+                "-s",
+                "vscode_remote_nenya"
+            ]
+        }
+    },
+    "problems.showCurrentInStatus": true,
+    "editor.suggest.showStatusBar": true,
+    "workbench.activityBar.visible": false,
+    "workbench.editor.showTabs": false,
+    "vim.useSystemClipboard": true,
+    "window.restoreWindows": "none",
+    "terminal.external.osxExec": "kitty",
+    "workbench.layoutControl.type": "menu",
+    "window.title": "",
+    "workbench.layoutControl.enabled": false,
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.remotePlatform": {
+        "narya": "linux"
+    },
+    "remote.SSH.configFile": "/Users/noah/.ssh/vscode_config",
+    "remote.SSH.serverInstallPath": {
+        "narya": "/home/ubuntu/.local/share/"
+    },
+    "files.associations": {
+        "vscode_config": "ssh_config"
+    },
+    "vim.hlsearch": true,
+    "vim.highlightedyank.enable": true,
+    "vim.visualstar": true
+}
