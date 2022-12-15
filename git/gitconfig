@@ -1,0 +1,50 @@
+[core]
+    compression=7
+    editor=nvim
+    ignoreCase=true
+
+[checkout]
+    workers=0
+[diff]
+    tool=nvimdiff
+    algorithm=minimal
+
+[fetch]
+    parallel=0
+
+[help]
+    autoCorrect=prompt
+
+[index]
+    recordEndOfIndexEntries=true
+    recordOffsetTable=true
+    threads=0
+
+[init]
+    defaultBranch=main
+
+[maintenance]
+    strategy=incremental
+
+[merge]
+    tool=nvimdiff
+
+[pack]
+    threads=0
+
+[push]
+    negotiate=true
+
+[repack]
+    writeBitmaps=true
+    autoUpdate=true
+
+[status]
+   showUntrackedFiles=no 
+
+[transfer]
+    fsckObjects=true
+
+[user]
+    name=nafryer
+    email=nafryer97@gmail.com
