@@ -247,5 +247,6 @@
     "git.verboseCommit": true,
     "vim.foldfix": true,
     "vim.neovimPath": "/opt/homebrew/bin/nvim",
-    "vim.enableNeovim": true
+    "vim.enableNeovim": true,
+    "git.autofetch": true
 }
