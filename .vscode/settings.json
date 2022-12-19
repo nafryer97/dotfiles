@@ -1,1 +1,9 @@
-{}
+{
+    "gitlens.integrations.enabled": true,
+    "gitlens.remotes": [
+        {
+            "domain": "github.com",
+            "type": "GitHub"
+        }
+    ]
+}

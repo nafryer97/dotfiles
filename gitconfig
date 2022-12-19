@@ -1,50 +1,52 @@
+[user]
+    name = Noah Fryer
+    email = nafryer97@gmail.com
 [core]
-    compression=7
+    compression=8
     editor=nvim
     ignoreCase=true
-
-[checkout]
-    workers=0
-[diff]
-    tool=nvimdiff
-    algorithm=minimal
-
-[fetch]
-    parallel=0
-
+    preloadIndex=true
+[feature]
+    manyFiles = false
 [help]
     autoCorrect=prompt
-
 [index]
     recordEndOfIndexEntries=true
     recordOffsetTable=true
     threads=0
-
-[init]
-    defaultBranch=main
-
 [maintenance]
     strategy=incremental
-
+[diff]
+    tool=nvimdiff
+    algorithm=histogram
+    indentHeuristic=true
 [merge]
     tool=nvimdiff
-
+    conflictStyle=diff3
+[mergetool]
+    writeToTemp=true
+    keepTemporaries=true
 [pack]
     threads=0
-
+    writeBitmapHashCache=true
 [push]
     negotiate=true
-
+[remote "origin"]
+    fetch="+refs/heads/*:refs/remotes/origin/*"
 [repack]
     writeBitmaps=true
     autoUpdate=true
-
 [status]
-   showUntrackedFiles=no 
-
+    relativePaths=true
+    renames=copy
+    showStash=true
+    showUntrackedFiles=yes
 [transfer]
     fsckObjects=true
-
-[user]
-    name=nafryer
-    email=nafryer97@gmail.com
+    unpackLimit=25
+[checkout]
+    workers=0
+[fetch]
+    parallel=0
+[init]
+    defaultBranch=main

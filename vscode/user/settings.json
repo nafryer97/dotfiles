@@ -1,6 +1,6 @@
 {
     "telemetry.telemetryLevel": "crash",
-    "editor.fontSize": 14,
+    "editor.fontSize": 18,
     "editor.fontFamily": "'JetbrainsMonoNL Nerd Font Mono', 'Jetbrains Mono NL', Menlo, Monaco, 'Courier New', monospace",
     "editor.cursorStyle": "block",
     "files.exclude": {
@@ -104,6 +104,13 @@
     "scm.diffDecorationsGutterPattern": {
         "added": true
     },
+    "gitlens.integrations.enabled": true,
+    "gitlens.remotes": [
+        {
+            "domain": "github.com",
+            "type": "GitHub"
+        }
+    ],
     "extensions.closeExtensionDetailsOnViewChange": true,
     "terminal.integrated.allowChords": false,
     "terminal.integrated.altClickMovesCursor": false,
@@ -114,7 +121,7 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.enableBell": true,
     "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 16,
     "terminal.integrated.persistentSessionScrollback": 9999,
     "terminal.integrated.scrollback": 9999,
     "terminal.integrated.sendKeybindingsToShell": true,
@@ -190,13 +197,55 @@
         "narya": "linux"
     },
     "remote.SSH.configFile": "/Users/noah/.ssh/vscode_config",
-    "remote.SSH.serverInstallPath": {
-        "narya": "/home/ubuntu/.local/share/"
-    },
     "files.associations": {
         "vscode_config": "ssh_config"
     },
     "vim.hlsearch": true,
     "vim.highlightedyank.enable": true,
-    "vim.visualstar": true
+    "vim.visualstar": true,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.defaultProfile.osx": "tmux",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.ignoreProcessNames": [
+        "starship",
+        "oh-my-posh",
+        "bash",
+        "zsh",
+        "tmux"
+    ],
+    "terminal.integrated.minimumContrastRatio": 7,
+    "terminal.integrated.shellIntegration.history": 0,
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.hovers.avatars": false,
+    "gitlens.views.commits.avatars": false,
+    "gitlens.views.repositories.includeWorkingTree": true,
+    "gitlens.advanced.fileHistoryFollowsRenames": true,
+    "gitlens.advanced.fileHistoryShowAllBranches": true,
+    "gitlens.views.fileHistory.avatars": false,
+    "gitlens.views.lineHistory.avatars": false,
+    "gitlens.views.remotes.avatars": false,
+    "gitlens.views.contributors.avatars": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.graph.commitOrdering": "topo",
+    "gitlens.liveshare.allowGuestAccess": false,
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.defaultDateSource": "committed",
+    "gitlens.advanced.commitOrdering": "topo",
+    "gitlens.blame.ignoreWhitespace": true,
+    "gitlens.telemetry.enabled": false,
+    "github.gitProtocol": "ssh",
+    "git.autoStash": true,
+    "git.fetchOnPull": true,
+    "git.mergeEditor": true,
+    "git.pullBeforeCheckout": true,
+    "git.scanRepositories": [
+        "/Users/noah/develop",
+        "/Users/noah/.local/share"
+    ],
+    "git.showPushSuccessNotification": true,
+    "git.timeline.showUncommitted": true,
+    "git.verboseCommit": true,
+    "vim.foldfix": true,
+    "vim.neovimPath": "/opt/homebrew/bin/nvim",
+    "vim.enableNeovim": true
 }

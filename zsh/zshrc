@@ -6,7 +6,8 @@ alias grep="/usr/bin/grep --color=auto"
 alias less="/usr/bin/less -g -M -s"
 alias view='/opt/homebrew/bin/nvim -R'
 alias nvman='/opt/homebrew/bin/nvim +Man!'
-eval "$(rbenv init - zsh)" 
+alias tmux='/opt/homebrew/bin/tmux -2 -u'
+eval "$(rbenv init - zsh)"
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
 if type brew &>/dev/null;
@@ -16,6 +17,8 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+bindkey -v
 
 #setopt autocd
 #setopt cdablevars
