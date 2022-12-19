@@ -42,7 +42,7 @@
     relativePaths=true
     renames=copy
     showStash=true
-    showUntrackedFiles=yes
+    showUntrackedFiles=all
 [transfer]
     fsckObjects=true
     unpackLimit=25
