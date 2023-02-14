@@ -1,3 +1,19 @@
+typeset -gx LANG=${LANG:-"en_US.UTF-8"}
+typeset -gx LC_CTYPE=${LC_CTYPE:-"en_US.UTF-8"}
+typeset -gx LC_NUMERIC=${LC_NUMERIC:-"en_US.UTF-8"}
+typeset -gx LC_TIME=${LC_TIME:-"en_US.UTF-8"}
+typeset -gx LC_COLLATE=${LC_COLLATE:-"en_US.UTF-8"}
+typeset -gx LC_MONETARY=${LC_MONETARY:-"en_US.UTF-8"}
+typeset -gx LC_MESSAGES=${LC_MESSAGES:-"en_US.UTF-8"}
+typeset -gx LC_PAPER=${LC_PAPER:-"en_US.UTF-8"}
+typeset -gx LC_NAME=${LC_NAME:-"en_US.UTF-8"}
+typeset -gx LC_ADDRESS=${LC_ADDRESS:-"en_US.UTF-8"}
+typeset -gx LC_TELEPHONE=${LC_TELEPHONE:-"en_US.UTF-8"}
+typeset -gx LC_MEASUREMENT=${LC_MEASUREMENT:-"en_US.UTF-8"}
+typeset -gx LC_IDENTIFICATION=${LC_IDENTIFICATION:-"en_US.UTF-8"}
+typeset -gx LC_ALL=${LC_ALL:-"en_US.UTF-8"}
+typeset -gx TZ=${TZ:-"America/Denver"}
+
 typeset -gx XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 typeset -gx XDG_CACHE_HOME=${XDG_CACHE_HOME:-$HOME/.cache}
 typeset -gx XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
@@ -10,13 +26,29 @@ typeset -gx XDG_PICTURES_DIR=${XDG_PICTURES_DIR:-$HOME/Pictures}
 typeset -gx XDG_VIDEOS_DIR=${XDG_VIDEOS_DIR:-$HOME/Videos}
 typeset -gx XDG_PROJECTS_DIR=${XDG_PROJECTS_DIR:-$HOME/Projects}
 
-typeset -gx SHELL_SESSIONS_DISABLE=1
+typeset -gx SHELL_SESSIONS_DISABLE=${SHELL_SESSIONS_DISABLE:-1}
 
-typeset -gx MANPAGER='nvim +Man!' 
-typeset -gx MANWIDTH=999
-typeset -gx ZDOTDIR=$HOME/.config/zsh
-typeset -gx ZLE_RPROMPT_INDEX=1
+typeset -gx MANWIDTH=${MANWIDTH:-999}
+typeset -gx ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
+typeset -gx ZLE_RPROMPT_INDEX=${ZLE_RPROMPT_INDEX:-1}
+
+typeset -grx HISTSIZE=${HISTSIZE:-99999}
+typeset -grx SAVEHIST=${SAVEHIST:-120000}
+
 typeset -U PATH path fpath
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-PATH="$HOME/bin:$PATH:/Users/noah/Library/Python/3.10/bin:"
+if [[ $(/usr/bin/uname) = Darwin ]]
+then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    PATH+=":/Users/noah/Library/Python/3.10/bin"
+elif [[ $(/usr/bin/uname) = Linux ]]
+then
+    [[ -d /snap/bin ]] && PATH=:/snap/bin:$PATH
+fi
+
+PATH=:${HOME:-/Users/$(/usr/bin/id -un)}/bin:$PATH
+
+typeset -gx PS1="%? %n@%m:%2~ %# "
+typeset -gx PS2="%__>"
+typeset -gx RPS1="%T"
+typeset -gx RPS2="%^"

@@ -1,4 +1,5 @@
-#. "$HOME/.cargo/env"
-typeset -gx LANG="en_US.UTF-8"
-typeset -gx LC_CTYPE="en_US.ISO8859-1"
-typeset -gx ZDOTDIR=$HOME/.config/zsh
+typeset -gx HOME=${HOME:-/Users/$(/usr/bin/id -un)}
+typeset -gx USER=${USER:-$(/usr/bin/id -un)}
+typeset -gx ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
+typeset -gx HISTSIZE=99999
+typeset -gx SAVEHIST=120000

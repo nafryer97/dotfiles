@@ -1,67 +1,122 @@
-alias ll='/bin/ls -FGhil'
-alias la='/bin/ls -FGahirt'
-alias lla='/bin/ls -FGahilrt'
-alias ls='/bin/ls -FGh'
-alias grep="/usr/bin/grep --color=auto"
-alias less="/usr/bin/less -g -M -s"
-alias view='/opt/homebrew/bin/nvim -R'
-alias nvman='/opt/homebrew/bin/nvim +Man!'
-alias tmux='/opt/homebrew/bin/tmux -2 -u'
-eval "$(rbenv init - zsh)"
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-
-if type brew &>/dev/null;
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
-
-bindkey -v
-
-#setopt autocd
-#setopt cdablevars
-#setopt pushd_ignore_dups
+setopt beep
+setopt auto_param_slash
+setopt auto_list
+setopt always_to_end
+unsetopt menu_complete
+setopt list_ambiguous
+setopt bash_auto_list
+setopt list_types
+setopt list_packed
+unsetopt list_beep
+unsetopt auto_menu
+setopt autocd
+setopt cdablevars
+setopt pushd_ignore_dups
 #setopt extended_glob
-#setopt mark_dirs
-#setopt nomatch
-#setopt hist_expire_dups_first
-#setopt hist_fcntl_lock
-#setopt hist_ignore_dups
-#setopt hist_lex_words
+setopt mark_dirs
+setopt nomatch
+setopt bad_pattern
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_fcntl_lock
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_no_functions
+setopt hist_reduce_blanks
+setopt hist_lex_words
 #setopt hist_no_store
-#setopt hist_save_no_dups
+setopt hist_save_no_dups
 #setopt correct
 #setopt correct_all
-#setopt check_jobs
-#setopt check_running_jobs
-#setopt prompt_subst
-#unsetopt inc_append_history
-#unsetopt share_history
-#unsetopt inc_append_history_time
-##setopt warn_create_global
-##setopt warn_nested_var
-#
-#HISTSIZE=5000
+setopt check_jobs
+setopt check_running_jobs
+setopt notify
+setopt prompt_subst
+setopt append_history
+unsetopt inc_append_history
+unsetopt inc_append_history_time
+setopt share_history
+#setopt warn_create_global
+#setopt warn_nested_var
+setopt hash_cmds
+unsetopt bg_nice
+unsetopt clobber
+setopt clobber_empty
+setopt append_create
+setopt transient_rprompt
+
+if [[ $(/usr/bin/uname) = Darwin ]]
+then
+  if [[ -x /bin/ls ]]
+  then
+    alias ll='/bin/ls --color=auto -@FGhily'
+    alias la='/bin/ls --color=auto -@FGahirty'
+    alias lla='/bin/ls --color=auto -@FGahilrty'
+    alias ls='/bin/ls --color=auto -@FGhy'
+  fi
+
+  if [[ -x /opt/homebrew/bin/nvim ]]
+  then
+    alias view='/opt/homebrew/bin/nvim -M'
+    alias nview='/opt/homebrew/bin/nvim -M'
+    alias nvman='/opt/homebrew/bin/nvim -M +Man! -- -'
+    typeset -gx MANPAGER='/opt/homebrew/bin/nvim -M +set\ showtabline=0 +Man! -- -'
+  fi
+
+  [[ -x /usr/bin/less ]] && alias less="/usr/bin/less -g -M -s"
+  [[ -x /opt/homebrew/bin/tmux ]] && alias tmux='/opt/homebrew/bin/tmux -2 -u'
+
+  eval "$(rbenv init - zsh)"
+  eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+  #. /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  #. /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+  #FPATH=/opt/homebrew/share/zsh-completions:/opt/homebrew/Cellar/zsh-async/1.8.5/share/zsh/site-functions:$ZDOTDIR/.zsh_functions:$FPATH
+
+  if [[ -x /opt/homebrew/bin/brew ]]
+  then
+    FPATH="$(/opt/homebrew/bin/brew --prefix)/share/zsh/site-functions:${FPATH}"
+    autoload -Uz compinit
+    compinit
+  fi
+elif [[ $(/usr/bin/uname) = Linux ]]
+then
+  if [[ -x /usr/bin/ls ]]
+  then
+    alias ll='/usr/bin/ls --group-directories-first --color=auto -Fahilrt'
+    alias la='/usr/bin/ls --group-directories-first --color=auto -Fahirt'
+    alias lla='/usr/bin/ls --group-directories-first --color=auto -Fahilrt'
+    alias ls='/usr/bin/ls --group-directories-first --color=auto -Fh'
+  fi
+
+  if [[ -x /snap/bin/nvim ]]
+  then
+    alias view='/snap/bin/nvim -M'
+    alias nview='/snap/bin/nvim -M'
+    alias nvman='/snap/bin/nvim -M +Man! -- -'
+    typeset -gx MANPAGER='/snap/bin/nvim -M +set\ showtabline=0 +Man! -- -'
+  elif [[ -x /usr/bin/nvim ]]
+  then
+    alias view='/usr/bin/nvim -M'
+    alias nview='/usr/bin/nvim -M'
+    alias nvman='/usr/bin/nvim -M +Man! -- -'
+    typeset -gx MANPAGER='/usr/bin/nvim -M +set\ showtabline=0 +Man! -- -'
+  fi
+fi
+
+[[ -x /usr/bin/grep ]] && alias grep="/usr/bin/grep --color=auto"
+
 #REPORTTIME=10
-#
-#. /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 #typeset -gx ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 #ZSH_AUTOSUGGEST_STRATEGY=(completion history)
 #ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 #
-#. /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 #
-#FPATH=/opt/homebrew/share/zsh-completions:/opt/homebrew/Cellar/zsh-async/1.8.5/share/zsh/site-functions:$ZDOTDIR/.zsh_functions:$FPATH
 #autoload -U colors && colors
 #autoload -Uz vcs_info
 #autoload -Uz async && async
 #
-#PS1="%? %n@%m:%2~ %# "
-#PS2="%__>"
-#RPS1="%T"
-#RPS2="%^"
 #
 #autoload -U compinit
 #if [[ ! -v $TMPPREFIX ]]; then
@@ -77,13 +132,10 @@ bindkey -v
 #
 ## default to file completion
 #zstyle ':completion:*' completer _expand _complete _files _correct _approximate
-#
-## Filesystem aliases
-#alias ..='cd ..'
-#alias ...='cd ../..'
-#alias ....="cd ../../.."
-#alias .....="cd ../../../.."
-#alias rmf="rm -rif"
-#alias rm="rm -i"
-#alias python="python3"
-#alias pip="pip3"
+
+typeset -gx PS1=${PS1:-"%? %n@%m:%2~ %# "}
+typeset -gx PS2=${PS2:-"%__>"}
+typeset -gx RPS1=${RPS1:-"%T"}
+typeset -gx RPS2=${RPS2:-"%^"}
+
+bindkey -v
