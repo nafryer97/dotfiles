@@ -41,7 +41,6 @@ setopt share_history
 setopt hash_cmds
 unsetopt bg_nice
 unsetopt clobber
-setopt clobber_empty
 setopt append_create
 setopt transient_rprompt
 
@@ -79,8 +78,10 @@ then
     autoload -Uz compinit
     compinit
   fi
+
 elif [[ $(/usr/bin/uname) = Linux ]]
 then
+  setopt clobber_empty
   if [[ -x /usr/bin/ls ]]
   then
     alias ll='/usr/bin/ls --group-directories-first --color=auto -Fahilrt'
@@ -132,6 +133,9 @@ fi
 #
 ## default to file completion
 #zstyle ':completion:*' completer _expand _complete _files _correct _approximate
+
+typeset -grx HISTSIZE=99999
+typeset -grx SAVEHIST=120000
 
 typeset -gx PS1=${PS1:-"%? %n@%m:%2~ %# "}
 typeset -gx PS2=${PS2:-"%__>"}

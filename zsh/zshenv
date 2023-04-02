@@ -3,3 +3,5 @@ typeset -gx USER=${USER:-$(/usr/bin/id -un)}
 typeset -gx ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
 typeset -gx HISTSIZE=99999
 typeset -gx SAVEHIST=120000
+
+[[ $(/usr/bin/unama) = Darwin ]] &&  unsetopt global_rcs

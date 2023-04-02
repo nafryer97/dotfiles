@@ -32,8 +32,8 @@ typeset -gx MANWIDTH=${MANWIDTH:-999}
 typeset -gx ZDOTDIR=${ZDOTDIR:-$HOME/.config/zsh}
 typeset -gx ZLE_RPROMPT_INDEX=${ZLE_RPROMPT_INDEX:-1}
 
-typeset -grx HISTSIZE=${HISTSIZE:-99999}
-typeset -grx SAVEHIST=${SAVEHIST:-120000}
+typeset -gx HISTSIZE=${HISTSIZE:-99999}
+typeset -gx SAVEHIST=${SAVEHIST:-120000}
 
 typeset -U PATH path fpath
 
